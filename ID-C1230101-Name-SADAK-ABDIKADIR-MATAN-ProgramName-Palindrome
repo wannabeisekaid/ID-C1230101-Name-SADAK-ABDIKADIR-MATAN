@@ -1,0 +1,27 @@
+import java.util.*;
+public class palindrome {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input;
+
+        for (;;) {
+            System.out.print("please enter a word: ");
+            input = scanner.nextLine();
+
+            boolean isitaPalindrome = true;
+            int length = input.length();
+
+            for (int i = 0; i < length / 2; i++) {
+                if (input.charAt(i) != input.charAt(length - i - 1)) {
+                    isitaPalindrome = false;
+                    break;
+                }
+            }
+
+            if (isitaPalindrome) {
+                System.out.println("the word: " + input + ": is a palindrome");
+                break;
+       }
+}
+    }
+}
